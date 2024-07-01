@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Работа с массивом</title>
+</head>
+<body>
+    <h1>Работа с массивом</h1>
+    <p>Исходный массив: <span id="originalArray"></span></p>
+    <p>Произведение нечетных элементов: <span id="productEvenElements"></span></p>
+    <p>Измененный массив: <span id="modifiedArray"></span></p>
+
+    <script>
+        // Создаем массив из 8 целых элементов
+        let array = [3, -1, 4, -5, 6, -7, 8, -9];
+
+        // Сохраняем исходный массив для последующих изменений
+        let originalArray = [...array];
+
+        // Находим произведение четных элементов
+        let productEvenElements = array.filter(num => num % 2 !== 0).reduce((prod, num) => prod * num, 1);
+
+        // Находим максимальный элемент массива
+        let maxElement = Math.max(...array);
+
+        // Заменяем все отрицательные элементы на максимальный элемент
+        let modifiedArray = array.map(num => num < 0 ? maxElement : num);
+
+        // Выводим исходный массив
+        document.getElementById("originalArray").textContent = originalArray.join(", ");
+
+        // Выводим произведение четных элементов
+        document.getElementById("productEvenElements").textContent = productEvenElements;
+
+        // Выводим измененный массив
+        document.getElementById("modifiedArray").textContent = modifiedArray.join(", ");
+    </script>
+</body>
+</html>
