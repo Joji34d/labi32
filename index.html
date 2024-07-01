@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .dropdown {
+            margin: 10px 0;
+        }
+        .dropdown select {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function navigate(selectElement) {
+            const url = selectElement.value;
+            if (url) {
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Лабораторные работы</h2>
+
+        <div class="dropdown">
+            <label for="dropdown1">1-4:</label>
+            <select id="dropdown1" onchange="navigate(this)">
+                <option value="lb1-3/портфолио.html">1 задание: портфолио</option>
+                <option value="lb1-3/Регистрация.html">2 задание: Регристрация</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="dropdown3">5-6-7-8:</label>
+            <select id="dropdown3" onchange="navigate(this)">
+                <option value="">Select a project...</option>
+                <option value="lb5-6-7-8/5/шаблон.html">5 лб</option>
+                <option value="lb5-6-7-8/6/шаблон.html">6 лб</option>
+                <option value="lb5-6-7-8/7/шаблон.html">7 лб</option>
+                <option value="lb5-6-7-8/8/2.html">8 лб</option>
+                
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="dropdown4">9:</label>
+            <select id="dropdown4" onchange="navigate(this)">
+                <option value="">Select a project...</option>
+                <option value="lb1-3\портфолио.html">Project 7</option>
+                <option value="C:/Users/37529/Desktop/работа/СПИИП/итоговое/9/1%20задание/Способ%202%20Внедрение%20JS%20внутри%20тега%20script%20непосредственно%20в%20body/2.html">Project 8</option>
+                <option value="C:/Users/37529/Desktop/работа/СПИИП/итоговое/9/1%20задание/Способ%203%20Внешний%20файл%20JavaScript/3.html">8</option>
+                <option value="">Select a project...</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="dropdown5">10-11-12:</label>
+            <select id="dropdown5" onchange="navigate(this)">
+                <option value="">Select a project...</option>
+                <option value="">Project 9</option>
+                <option value="">Project 10</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="dropdown6">13-14:</label>
+            <select id="dropdown6" onchange="navigate(this)">
+                <option value="">Select a project...</option>
+                <option value="">Project 11</option>
+                <option value="">Project 12</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>
