@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .dropdown {
+            margin: 10px 0;
+        }
+        .dropdown select {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function navigate(selectElement) {
+            const url = selectElement.value;
+            if (url) {
+                window.open(url, '_blank');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Лабораторные работы</h2>
+
+        <div class="dropdown">
+            <label for="dropdown1">1-4:</label>
+            <select id="dropdown1" onchange="navigate(this)">
+                <option value="lb1-3/портфолио.html">1 задание: портфолио</option>
+                <option value="lb1-3/Регистрация.html">2 задание: Регристрация</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="dropdown3">5-6-7-8:</label>
+            <select id="dropdown3" onchange="navigate(this)">
+                <option value="">Select a project...</option>
+                <option value="lb5-6-7-8/5/шаблон.html">5 лб</option>
+                <option value="lb5-6-7-8/6/шаблон.html">6 лб</option>
+                <option value="lb5-6-7-8/7/шаблон.html">7 лб</option>
+                <option value="lb5-6-7-8/8/2.html">8 лб</option>
+                
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="dropdown4">9:</label>
+            <select id="dropdown4" onchange="navigate(this)">
+                <option value="">Select a project...</option>
+                <option value="9/1 zadanie/1 sposob/1.html">1 способ</option>
+                <option value="9/1 zadanie/2 sposob/2.html">2 способ</option>
+                <option value="9/1 zadanie/3 sposob/3.html">3 способ</option>
+                <option value="9/1 zadanie/4 sposob/4.html">4 способ</option>
+                <option value="9/2 zadanie/Оператор if.html">2 задание 1</option>
+                <option value="9/2 zadanie/Оператор return.html">2 задание 2</option>
+                <option value="9/2 zadanie/Оператор switch.html">2 задание 3</option>
+                <option value="9/2 zadanie/Операторы break и continue.html">2 задание 4</option>
+                <option value="9/2 zadание/Цикл do..while.html">2 задание 5</option>
+                <option value="9/2 zadание/Цикл for.html">2 задание 6</option>
+                <option value="9/2 zadание/Цикл while.html">2 задание 7</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="dropdown5">10-11-12:</label>
+            <select id="dropdown5" onchange="navigate(this)">
+                <option value="">Select a project...</option>
+                <option value="10-11-12\1 zadanie\1.html">1 задание</option>
+                <option value="10-11-12\2 zadanie\2.html">2 задание</option>
+                <option value="10-11-12\3 zadanie\3.html">3 задание</option>
+                <option value="10-11-12\4 zadanie\4.html">4 задание </option>
+                <option value="10-11-12\5 zadanie\5 .html">4 задание </option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="dropdown6">13-14:</label>
+            <select id="dropdown6" onchange="navigate(this)">
+                <option value="">Select a project...</option>
+                <option value="13-14/1 zadanie/1">1 задание</option>
+                <option value="13-14/2 zadanie/2">2 задание</option>
+                <option value="13-14/3 zadanie/3">3 задание</option>
+                <option value="13-14/4 zadanie/4">4 задание</option>
+                <option value="13-14/5 zadanie/5">5 задание</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>
