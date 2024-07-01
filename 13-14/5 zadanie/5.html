@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валидация форм</title>
+    <style>
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('validateForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const inputField = document.getElementById('inputField');
+                const feedback = document.getElementById('feedback');
+                const value = inputField.value;
+
+                if (!value) {
+                    feedback.textContent = 'Поле обязательно для заполнения.';
+                    feedback.className = 'error';
+                } else if (/\s/.test(value)) {
+                    feedback.textContent = 'Поле не должно содержать пробелы.';
+                    feedback.className = 'error';
+                } else if (value.length > 20) {
+                    feedback.textContent = 'Длина значения не должна превышать 20 символов.';
+                    feedback.className = 'error';
+                } else {
+                    feedback.textContent = 'Валидация пройдена успешно!';
+                    feedback.className = 'success';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="validateForm">
+        <label for="inputField">Введите значение:</label>
+        <input type="text" id="inputField" name="inputField">
+        <button type="submit">Проверить</button>
+        <span id="feedback"></span>
+    </form>
+</body>
+</html>
