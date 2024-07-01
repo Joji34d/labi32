@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Задание</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Задание 2.1: Получить информацию о статусе загрузки страницы
+            console.log('Страница полностью загружена.');
+
+            // Задание 2.2: Показать алерт через 5 секунд после загрузки страницы
+            setTimeout(() => {
+                alert('Прошло 5 секунд с момента загрузки страницы.');
+            }, 5000);
+
+            // Задание 2.3: Удалить элемент при щелчке по кнопке
+            document.getElementById('removeButton').addEventListener('click', () => {
+                document.getElementById('removableElement').remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 id="removableElement">Навроцкий Дмитрий</h1>
+    <a href="https://www.example.com">Мой любимый сайт</a>
+    <img src="photo_2024-06-29_04-23-04.jpg" alt="Пример изображения">
+    <button id="removeButton">Удалить элемент</button>
+</body>
+</html>
