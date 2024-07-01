@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вывод Фамилии и Имени</title>
+    <script>
+        function displayNames() {
+            const surname = "Навроцкий";  // Замените на вашу фамилию
+            const name = "Дмитрий";       // Замените на ваше имя
+            const n = 5;               // Замените на ваш номер варианта
+            
+            let output = "";
+            for (let i = 0; i < n; i++) {
+                output += surname + " " + name + "<br>";
+            }
+            
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</head>
+<body onload="displayNames()">
+    <div id="output"></div>
+</body>
+</html>
