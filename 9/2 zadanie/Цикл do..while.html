@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do..While Loop</title>
+    <script>
+        function askForNumber() {
+            let number;
+            do {
+                number = parseInt(prompt("Enter a number greater than 10:"));
+            } while (number <= 10);
+            alert("Thank you! You entered " + number);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="askForNumber()">Enter Number</button>
+</body>
+</html>

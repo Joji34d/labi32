@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Statement</title>
+    <script>
+        function calculateSum(a, b) {
+            return a + b;
+        }
+
+        function showSum() {
+            let a = parseInt(prompt("Enter first number:"));
+            let b = parseInt(prompt("Enter second number:"));
+            let sum = calculateSum(a, b);
+            alert("The sum is: " + sum);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showSum()">Calculate Sum</button>
+</body>
+</html>
